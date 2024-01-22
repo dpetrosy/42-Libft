@@ -1,41 +1,34 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: dpetrosy <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/04/02 19:56:07 by dpetrosy          #+#    #+#              #
-#    Updated: 2022/05/09 20:03:45 by dpetrosy         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+NAME			= libft.a
+CC				= cc
+CFLAGS			= -Wall -Wextra -Werror
+AR				= ar
+ARFLAGS			= -rcs
+INCLUDES 		= -I.
+SRCS_DIR		= .
+SRCS			= $(wildcard $(SRCS_DIR)/*.c)
+BSRCS			= $(wildcard $(SRCS_DIR)/ft_lst*.c)
+OBJS_DIR		= $(SRCS_DIR)
+OBJS			= $(patsubst $(SRCS_DIR)/%.c, $(OBJS_DIR)/%.o, $(SRCS))
+BOBJS			= $(patsubst $(SRCS_DIR)/%.c, $(OBJS_DIR)/%.o, $(BSRCS))
+RM				= rm -f
 
-.PHONY: all bonus clean fclean re
+all : $(NAME) bonus
 
-name=libft.a
-compiler=cc
-flags=-Wall -Wextra -Werror
-src=$(wildcard *.c)
-bsrc=$(wildcard ft_lst*.c)
-objects=$(src:.c=.o)
-bobjects=$(bsrc:.c=.o)
+$(NAME) : $(OBJS)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
-all : $(name) $(bonus)
+$(OBJS_DIR)/%.o : $(SRCS_DIR)/%.c
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
-$(name) : $(objects)
-	ar rcs $(name) $(objects)
-
-%.o : %.c
-	$(compiler) $(flags) -c $< -o $@
-
-bonus :	$(bobjects)
-	ar rcs $(name) $(bobjects)
+bonus : $(BOBJS)
+	$(AR) $(ARFLAGS) $(NAME) $(BOBJS)
 
 clean :
-	rm -f $(objects)
-	rm -f $(bobjects)
+	$(RM) $(OBJS)
 
 fclean : clean
-	rm -f $(name)
+	$(RM) $(NAME)
 
-re : fclean all
+re: fclean all
+
+.PHONY: all bonus clean fclean re 
