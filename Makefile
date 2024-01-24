@@ -12,7 +12,7 @@ OBJS			= $(patsubst $(SRCS_DIR)/%.c, $(OBJS_DIR)/%.o, $(SRCS))
 BOBJS			= $(patsubst $(SRCS_DIR)/%.c, $(OBJS_DIR)/%.o, $(BSRCS))
 RM				= rm -f
 
-all : $(NAME) bonus
+all : $(NAME) $(bonus)
 
 $(NAME) : $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)

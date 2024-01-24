@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dapetros <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 21:21:18 by dapetros          #+#    #+#             */
-/*   Updated: 2024/01/24 21:23:01 by dapetros         ###   ########.fr       */
+/*   Created: 2024/01/24 21:13:00 by dapetros          #+#    #+#             */
+/*   Updated: 2024/01/24 21:13:20 by dapetros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_putstr_fd(char *s, int fd)
 {
-	void	*mem;
+	size_t	i;
 
-	if (size && count && (65536 / size) < count)
-		return (NULL);
-	mem = (void *)malloc(count * size);
-	if (!mem)
-		return (NULL);
-	ft_bzero(mem, count * size);
-	return (mem);
+	i = 0;
+	while (s[i])
+	{
+		write (fd, &s[i], 1);
+		++i;
+	}
 }
