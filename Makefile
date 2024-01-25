@@ -3,8 +3,6 @@ CC				= cc
 CFLAGS			= -Wall -Wextra -Werror
 AR				= ar
 ARFLAGS			= -rcs
-INCLUDES 		= -I.
-SRCS_DIR		= .
 SRCS			= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	   			  ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
 	              ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c \
@@ -17,9 +15,8 @@ BSRCS			= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 			 	  ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
 			 	  ft_lstmap.c
 
-OBJS_DIR		= $(SRCS_DIR)
-OBJS			= $(patsubst $(SRCS_DIR)/%.c, $(OBJS_DIR)/%.o, $(SRCS))
-BOBJS			= $(patsubst $(SRCS_DIR)/%.c, $(OBJS_DIR)/%.o, $(BSRCS))
+OBJS			= $(SRCS:%.c=%.o)
+BOBJS			= $(BSRCS:%.c=%.o)
 RM				= rm -f
 
 all : $(NAME)
@@ -27,14 +24,14 @@ all : $(NAME)
 $(NAME) : $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
-$(OBJS_DIR)/%.o : $(SRCS_DIR)/%.c
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 bonus : $(BOBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(BOBJS)
 
 clean :
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BOBJS)
 
 fclean : clean
 	$(RM) $(NAME)
