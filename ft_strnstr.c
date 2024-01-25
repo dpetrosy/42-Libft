@@ -6,7 +6,7 @@
 /*   By: dapetros <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:47:04 by dapetros          #+#    #+#             */
-/*   Updated: 2024/01/24 17:48:38 by dapetros         ###   ########.fr       */
+/*   Updated: 2024/01/25 14:56:08 by dapetros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t		j;
 	char		*ret_ptr;
 
-	if (needle[0] == '\0')
+	if (needle[0] == '\0' || (!haystack && !len))
 		return ((char *)haystack);
 	i = 0;
 	while (haystack[i] && i < len)

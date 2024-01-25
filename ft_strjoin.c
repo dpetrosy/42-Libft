@@ -6,7 +6,7 @@
 /*   By: dapetros <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 21:00:14 by dapetros          #+#    #+#             */
-/*   Updated: 2024/01/24 21:00:16 by dapetros         ###   ########.fr       */
+/*   Updated: 2024/01/25 14:46:04 by dapetros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	j;
 
+	if (!s1 || !s2)
+		return (0);
 	str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!str)
 		return (0);

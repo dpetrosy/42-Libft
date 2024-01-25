@@ -6,7 +6,7 @@
 /*   By: dapetros <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 21:58:17 by dapetros          #+#    #+#             */
-/*   Updated: 2024/01/24 21:58:19 by dapetros         ###   ########.fr       */
+/*   Updated: 2024/01/25 14:47:23 by dapetros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,8 @@ char	**ft_split(char const *s, char c)
 	char		**words;
 	t_indexes	split_indexes;
 
+	if (!s)
+		return (NULL);
 	words_count = get_words_count(s, c);
 	words = (char **)malloc(sizeof(char *) * (words_count + 1));
 	if (!words)

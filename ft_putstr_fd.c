@@ -6,7 +6,7 @@
 /*   By: dapetros <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 21:13:00 by dapetros          #+#    #+#             */
-/*   Updated: 2024/01/24 21:13:20 by dapetros         ###   ########.fr       */
+/*   Updated: 2024/01/25 14:48:46 by dapetros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{

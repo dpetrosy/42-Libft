@@ -6,7 +6,7 @@
 /*   By: dapetros <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:42:28 by dapetros          #+#    #+#             */
-/*   Updated: 2024/01/24 20:42:29 by dapetros         ###   ########.fr       */
+/*   Updated: 2024/01/25 14:45:35 by dapetros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t			len_s;
 	char			*substr;
 
+	if (!s)
+		return (0);
 	len_s = ft_strlen(s);
 	if (start >= len_s)
 		len = 0;

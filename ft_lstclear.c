@@ -6,7 +6,7 @@
 /*   By: dapetros <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 23:06:20 by dapetros          #+#    #+#             */
-/*   Updated: 2024/01/24 23:06:39 by dapetros         ###   ########.fr       */
+/*   Updated: 2024/01/25 14:52:17 by dapetros         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*node;
 	t_list	*tmp;
 
+	if (!lst || !del)
+		return ;
 	node = *lst;
 	while (node)
 	{
