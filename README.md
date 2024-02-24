@@ -24,11 +24,11 @@
   </p>
 
   <h3>
-      <a href="#%EF%B8%8F-about">📜 About Project</a>
+      <a href="#-about-project">📜 About Project</a>
     <span> · </span>
-      <a href="#%EF%B8%8F-about">📑 Functions List</a>
+      <a href="#-functions-list">📑 Functions List</a>
     <span> · </span>
-      <a href="#%EF%B8%8F-about">👨‍💻 Usage</a>
+      <a href="#-usage">👨‍💻 Usage</a>
   </h3>
 </div>
 
