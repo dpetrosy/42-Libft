@@ -60,7 +60,6 @@ For detailed information, refer to the [**subject of this project**](README_file
 
 ### Functions from `<strings.h>` library
 * [`ft_bzero`](libft/ft_bzero.c)		  - write zeroes to a byte string.
-* [`ft_strncmp`](libft/ft_strncmp.c)		  - compare strings (size-bounded).
 * [`ft_memset`](libft/ft_memset.c)		- write a byte to a byte string.
 * [`ft_memchr`](libft/ft_memchr.c)		- locate byte in byte string.
 * [`ft_memcmp`](libft/ft_memcmp.c)		- compare byte string.
@@ -72,6 +71,7 @@ For detailed information, refer to the [**subject of this project**](README_file
 * [`ft_strchr`](libft/ft_strchr.c)		  - locate character in string (first occurrence).
 * [`ft_strrchr`](libft/ft_strrchr.c)	  - locate character in string (last occurence).
 * [`ft_strnstr`](libft/ft_strnstr.c)	  - locate a substring in a string (size-bounded).
+* [`ft_strncmp`](libft/ft_strncmp.c)		  - compare strings (size-bounded).
 * [`ft_strdup`](libft/ft_strdup.c)			- save a copy of a string (with malloc).
 * [`ft_strlcpy`](libft/ft_strlcpy.c)		- size-bounded string copying.
 * [`ft_strlcat`](libft/ft_strlcat.c)		- size-bounded string concatenation.
