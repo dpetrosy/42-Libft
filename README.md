@@ -65,7 +65,6 @@ For detailed information, refer to the [**subject of this project**](README_file
 * [`ft_memcmp`](libft/ft_memcmp.c)		- compare byte string.
 * [`ft_memmove`](libft/ft_memmove.c)	- copy byte string.
 * [`ft_memcpy`](libft/ft_memcpy.c)		- copy memory area.
-* [`ft_memccpy`](libft/ft_memcpy.c)	- copy string until character found.
 
 ### Functions from `<string.h>` library
 * [`ft_strlen`](libft/ft_strlen.c)		  - find length of string.
