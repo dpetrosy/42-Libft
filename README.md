@@ -2,7 +2,7 @@
 <div align="center">
   <!-- Logo -->
   <a href="https://github.com/dpetrosy/42-Libft">
-  <img src="logo.png" alt="Logo" width="80" height="80">
+  <img src="README_files/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <!-- Project Name -->
@@ -38,7 +38,7 @@
 
 > _The aim of this project is to code a C library regrouping usual functions that you'll be allowed to use in all your other projects._
 
-For detailed information, refer to the [**subject of this project**](https://github.com/dpetrosy/42-Libft/README_files/subject.pdf).
+For detailed information, refer to the [**subject of this project**](README_files/libft_subject.pdf).
 
 	🚀 TLDR: this project consists of coding basic C functions (see below), which are then compiled
 	into a library for use in other projects of the cursus.
