@@ -103,7 +103,7 @@ For detailed information, refer to the [**subject of this project**](README_file
 ## 👨‍💻 Usage
 ### Requirements
 
-The library is written in C language and thus needs the **`gcc` compiler** and some standard **C libraries** to run.
+The library is written in C language and thus needs the **gcc compiler** and some standard **C libraries** to run.
 
 ### Instructions
 
