@@ -86,7 +86,6 @@ For detailed information, refer to the [**subject of this project**](README_file
 * [`ft_strjoin`](libft/ft_strjoin.c)			  - concatenate two strings into a new string (with malloc).
 * [`ft_split`](libft/ft_split.c)				    - split string, with specified character as delimiter, into an array of strings.
 * [`ft_strmapi`](libft/ft_strmapi.c)			  - create new string from modifying string with specified function.
-* [`ft_ftoa_rnd`](libft/ft_ftoa_rnd.c)			- convert float to ASCII string.
 
 ### Linked list functions
 * [`ft_lstnew`](libft/ft_lstnew.c)				      - create new list.
