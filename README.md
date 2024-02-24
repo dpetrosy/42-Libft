@@ -60,7 +60,7 @@ For detailed information, refer to the [**subject of this project**](README_file
 
 ### Functions from `<strings.h>` library
 * [`ft_bzero`](libft/ft_bzero.c)		  - write zeroes to a byte string.
-* [`ft_strncmp`](libft/ft_strncmp.c)		  - compares two strings.
+* [`ft_strncmp`](libft/ft_strncmp.c)		  - compare strings (size-bounded).
 * [`ft_memset`](libft/ft_memset.c)		- write a byte to a byte string.
 * [`ft_memchr`](libft/ft_memchr.c)		- locate byte in byte string.
 * [`ft_memcmp`](libft/ft_memcmp.c)		- compare byte string.
