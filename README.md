@@ -40,8 +40,8 @@
 
 For detailed information, refer to the [**subject of this project**](README_files/libft_subject.pdf).
 
-	🚀 TLDR: this project consists of coding basic C functions (see below), which are then compiled
-	into a library for use in other projects of the cursus.
+	🚀 TLDR: this project consists of coding basic C functions (see below), which are then
+	compiled into a library for use in other projects of the cursus.
 
 ## 📑 Functions List
 
